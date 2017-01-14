@@ -5,8 +5,7 @@
 
 Overview
 ============
-In this demo code, we implement Tensorflows [Sequence to Sequence](https://www.tensorflow.org/versions/r0.12/tutorials/seq2seq/index.html) model to train a
-chatbot on the [Faulkner at Virginia: An Audio Archive](https://http://faulkner.lib.virginia.edu/).
+In this demo code, I've implemented Tensorflow's [Sequence to Sequence](https://www.tensorflow.org/versions/r0.12/tutorials/seq2seq/index.html) model to train a chatbot on the [Faulkner at Virginia: An Audio Archive](https://http://faulkner.lib.virginia.edu/).
 
 Dependencies
 ============
