@@ -1,6 +1,6 @@
 # Faulknerbot
 
-![William Faulkner](http://a2.files.biography.com/image/upload/c_fit,cs_srgb,dpr_1.0,h_1200,q_80,w_1200/MTE5NDg0MDU0OTYxNzUxNTY3.jpg)
+![William Faulkner](faulknerbot.jpg)
 
 
 Overview
