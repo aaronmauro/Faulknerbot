@@ -38,12 +38,12 @@ except NameError:
     pass
 else:
     reload(sys).setdefaultencoding('utf-8')
-    
+
 try:
     from ConfigParser import SafeConfigParser
 except:
     from configparser import SafeConfigParser # In Python 3, ConfigParser has been renamed to configparser for PEP 8 compliance.
-    
+
 gConfig = {}
 
 def get_config(config_file='seq2seq.ini'):
@@ -117,7 +117,7 @@ def create_model(session, forward_only):
     model.saver.restore(session, ckpt.model_checkpoint_path)
   else:
     print("Created model with fresh parameters.")
-    session.run(tf.initialize_all_variables())
+    session.run(tf.global_variables_initializer())
   return model
 
 
@@ -269,7 +269,7 @@ def self_test():
 def init_session(sess, conf='seq2seq.ini'):
     global gConfig
     gConfig = get_config(conf)
- 
+
     # Create model and load parameters.
     model = create_model(sess, True)
     model.batch_size = 1  # We decode one sentence at a time.

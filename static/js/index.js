@@ -24,6 +24,8 @@ function setDate(){
   }
 }
 
+
+
 function insertMessage() {
   msg = $('.message-input').val();
   if ($.trim(msg) == '') {
@@ -59,7 +61,7 @@ function interact(message){
 		msg: message,
 	}).done(function(reply) {
 		// Message Received
-		// 	remove loading meassage
+		// Remove loading meassage
     $('.message.loading').remove();
 		// Add message to chatbox
     $('<div class="message new"><figure class="avatar"><img src="/static/res/botim.png" /></figure>' + reply['text'] + '</div>').appendTo($('.mCSB_container')).addClass('new');
