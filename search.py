@@ -8,8 +8,8 @@ from bs4 import BeautifulSoup
 	## Text Search ##
 	#################
 
-def search(phrase):
-    term = phrase.replace(" ","+")
+def search(chatbox):
+    term = chatbox.replace(" ","+")
     query = "https://www.google.com/search?num=001&safe=off&q="+term+"+site:http://faulkner.lib.virginia.edu/"
     #optional open browser
     #webbrowser.open(query)
@@ -18,7 +18,7 @@ def search(phrase):
     #print full search results
     #print(soup)
     textSearch = soup.findAll('div',attrs={'id':'search'})
-    #pick the text of the top result
+    #pick the text from the top result
     topResult = soup.findAll('span',attrs={"class":"st"})
     return str(topResult)
 
@@ -26,10 +26,12 @@ def search(phrase):
 	## Link Search ##
 	#################
 
-def link(phrase):
-    term = phrase.replace(" ","+")
+def link(chatbox):
+    term = chatbox.replace(" ","+")
+    query = "https://www.google.com/search?num=001&safe=off&q="+term+"+site:http://faulkner.lib.virginia.edu/"
     htmlText = requests.get(query)
     soup = BeautifulSoup(htmlText.text)
     linkSearch = soup.findAll('cite')
-    links = str(linkSearch).replace("<cite>","<a href=\"").replace("</cite>","\"></a>")
+    links = str(linkSearch).replace("<cite>","<a target='_blank' href='http://").replace("<cite class=\"_WGk\">","<a target='_blank' href='http://").replace("</cite>","'>Source text</a>")
+    links = links.replace(", "," ")
     return links
