@@ -39,5 +39,5 @@ then run the code like so
 
 Credits
 ===========
-This chatbot is based on the Tensorflow Chatbot Demo by @Sirajology on [Youtube](https://youtu.be/SJDEOWLHYVo). Credit for the vast majority of code here goes to [suriyadeepan](https://github.com/suriyadeepan). I've preprocessed the dataset and trained the system. I've also added a objectionable language editing system to avoid [the fate of Tay](http://arstechnica.com/information-technology/2016/03/tay-the-neo-nazi-millennial-chatbot-gets-autopsied/).
+Credit for the vast majority of code here goes to the [TensorFlow authors](https://research.google.com/pubs/pub45166.html). I've preprocessed the dataset and trained the system. I've also included a quick search function to retrieve results from The University of Virginia Libraries Faulkner at [Virginia Audio Archive site](http://faulkner.lib.virginia.edu/). I've also added a objectionable language editing system to avoid [the fate of Tay](http://arstechnica.com/information-technology/2016/03/tay-the-neo-nazi-millennial-chatbot-gets-autopsied/).
 
